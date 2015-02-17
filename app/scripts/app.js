@@ -4,15 +4,19 @@ var React = window.React = require('react'),
     mountNode = document.getElementById("app");
 
 var TodoList = React.createClass({
+  removeItem () {
+    alert('removed');
+  },
   render: function() {
+    
     var createItem = function(itemText) {
-      return <a href="#" className={'list-group-item'}><span className={'badge'}><i className={'fa fa-times'}></i></span>{itemText}</a>;
+      return <a key={this.props.id} href="#" onClick={this.removeItem} className={'list-group-item'}><span className={'badge'}><i className={'fa fa-check'}></i></span>{itemText}</a>;
     };
     return <div>
               <div className={'list-group'}>
               {this.props.items.map(createItem)}
               </div>
-            </div>;
+            </div>; 
   } 
 });
 var TodoApp = React.createClass({
