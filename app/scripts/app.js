@@ -6,14 +6,14 @@ var React = window.React = require('react'),
 var TodoList = React.createClass({
   render: function() {
     var createItem = function(itemText) {
-      return <li>{itemText}</li>;
+      return <a href="#" className={'list-group-item'}><span className={'badge'}><i className={'fa fa-times'}></i></span>{itemText}</a>;
     };
     return <div>
-              <ul className={'list-unstyled'}>
+              <div className={'list-group'}>
               {this.props.items.map(createItem)}
-              </ul>
+              </div>
             </div>;
-  }
+  } 
 });
 var TodoApp = React.createClass({
   getInitialState: function() {
