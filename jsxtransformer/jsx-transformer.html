@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>JSX Browser Compiler</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/react.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.1/JSXTransformer.js"></script>
+</head>
+<body>
+	<h1>JSX In-browser compiler</h1>
+	<div id="app"></div>
+	<script type="text/jsx" src="transformer.js"></script>
+	<script type="text/jsx">
+		/** @jsx React.DOM */
+		React.render(
+			<Transformer />,
+			document.getElementById('app')
+		);
+	</script>
+</body>
+</html>
