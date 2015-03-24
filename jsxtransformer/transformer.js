@@ -25,10 +25,10 @@ var Transformer = React.createClass({
 			return(
 					<div>
 						<div className="row">
-							<p className="alert alert-danger">{this.state.err}</p>
+							<p className="alert alert-danger">&nbsp;{this.state.err}</p>
 						</div>
 						<div className="row"></div>
-						<textarea className="col-sm-6 input-lg" defaultValue={this.state.value} onChange={this.update} />
+						<textarea className="col-sm-6 input-lg" defaultValue={this.state.input} onChange={this.update} />
 						<pre className="col-sm-6 input-lg" >{this.state.output}</pre>
 					</div>
 			)
